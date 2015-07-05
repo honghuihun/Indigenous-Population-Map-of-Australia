@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>Indigenous Population Dot Map of Australia</title>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+<style>
+/*
+#map {
+  width: 100%;
+  height: 620px;
+}
+*/
+ #legendbox {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  z-index: 1000;
+  }
+  .cartodb-overlay.overlay-text{
+    position: absolute;
+    border-radius: 3px;
+  font-size: 20px;
+  line-height: normal;
+  color: #000;
+  word-break: break-word;
+  }
+
+</style>
+
+<header>
+</header>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.min.js"></script>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+<body>
+  <div id="map-container">
+    <div id="map" style="height:97vh;width:100%;">
+      <div class="cartodb-overlay overlay-text desktop" style="z-index: 4; max-width: 400px; margin-left: 0px; margin-top: 0px; top: 20px; left: 60px; right: auto; bottom: auto; display: block; background-color: rgba(0, 0, 0, 0);">    <div class="content">    <div class="text widget_text" style="z-index: 4; color: #000; text-align: left; font-size: 28px;"><strong>Indigenous Population Dot Map of Australia</strong></div>    </div></div>
+      <div class="cartodb-overlay overlay-text desktop" style="z-index: 4; max-width: 400px; margin-left: 0px; margin-top: 0px; top: 105px; left: 60px; right: auto; bottom: auto; display: block; background-color: rgba(0, 0, 0, 0);">    <div class="content">    <div class="text widget_text" style="z-index: 4; color: #000; text-align: left; font-size: 14px;"><div><span class="">In 2011, there were 699,900 Indigenous people living in Australia, accounting for 3% of the total Australian population. Understanding the spatial distribution of different population groups is a key element in the socio-economic planning and policy-making process relating to specific population groups.</span><br></div><div><br></div><div>This is a map of every indigenous person counted by the 2011 ABS Census. The map has 699,900 dots - one for each person. Try zooming in to see the incredible details. We used ABS Census data from 2011.</div><div><br></div><div>Developed by Meead Saberi, Bryan Hong, Julian Li, Emily Chen, and Sajjad Shafiei at Monash University for GovHack 2015.</div></div>    </div></div>
+    </div>
+  </div>
+      <script>
+      $(function() {
+
+          var map = L.mapbox.map('map', 'cityscience.mkd4nh91', {
+                            minZoom: 4,
+                            maxZoom: 12,
+                            attribution: 'Map data contributors ' +
+                                    '<a href="http://monash.edu/research/city-science/">Monash City Science</a>'
+                          })
+                          .setView([-28.8159009, 115.9629722], 4);
+
+
+
+      });
+
+
+      </script>
+</body>
+</html>
